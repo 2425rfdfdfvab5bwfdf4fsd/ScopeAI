@@ -1,0 +1,18 @@
+import { auth } from "@/lib/auth";
+import { redirect } from "next/navigation";
+import { Sidebar } from "@/components/layout/sidebar";
+
+export default async function ScopeLayout({ children }: { children: React.ReactNode }) {
+  const session = await auth();
+  if (!session?.user) redirect("/auth/signin");
+  const user = session.user as typeof session.user & { emailVerified?: Date | null };
+  if (user.emailVerified === null) redirect("/auth/verify");
+  return (
+    <div className="flex h-screen bg-slate-50 overflow-hidden">
+      <Sidebar user={session.user} />
+      <main className="flex-1 overflow-auto">
+        <div className="max-w-7xl mx-auto px-6 py-8">{children}</div>
+      </main>
+    </div>
+  );
+}
