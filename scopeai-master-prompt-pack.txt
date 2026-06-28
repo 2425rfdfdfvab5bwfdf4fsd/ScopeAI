@@ -1,0 +1,877 @@
+================================================================================
+PROJECT NAME: ScopeAI — AI Scope Guard for Freelance Developers
+================================================================================
+
+PROJECT SUMMARY:
+ScopeAI is an AI-powered scope creep detection and change order management SaaS
+tool built for freelance developers and small dev agencies. It automatically
+monitors client communication via Slack and email integrations, compares incoming
+requests against the original agreed project scope, flags out-of-scope work in
+real time, and generates professional change orders for client approval — helping
+developers stop losing $7,800–$15,600/year to unbilled free work.
+
+TARGET USERS:
+- Primary: Freelance developers managing 3–10 active projects, billing $5K–$30K/month
+- Secondary: Small dev agency principals (2–5 person teams)
+- Client-side: End clients who receive and approve/reject change order requests
+
+KEY ASSUMPTIONS:
+- Built solo by a full-stack developer (React/Next.js/Node.js/PostgreSQL/AI stack)
+- 10–15 hours/week development time available
+- $0 marketing budget; distribution via X (@saifbuilds) and warm network of 29+ past clients
+- Target: $2K–$5K MRR
+- Payments via Paddle or Dodo Payments (Stripe not available in Pakistan)
+- Client requests reach ScopeAI automatically via Slack OAuth and email (Gmail/Outlook) integration
+- No mobile app at MVP; web-only SaaS
+- Pricing assumed at $19–$49/month per user
+- Original project scope is defined by the developer inside the app (uploaded document or manual entry)
+- Change orders require developer confirmation before being sent to client
+- Built for a June 2026 launch
+
+DATE CREATED: June 28, 2026
+
+NOTE:
+This file contains GENERATOR PROMPTS — not the final documents themselves.
+Each prompt below is designed to be pasted into an AI (such as ChatGPT, Claude,
+or Gemini) to generate the corresponding professional document for ScopeAI.
+The quality of the output depends on how much additional context you provide
+to the AI alongside the prompt. The more context you add, the better the result.
+
+================================================================================
+
+
+================================================================================
+1. PRD GENERATOR PROMPT
+================================================================================
+
+You are an expert Product Manager and Product Strategist with deep experience
+in B2B SaaS tools for freelancers and dev agencies.
+
+Your task is to generate a complete, professional Product Requirements Document
+(PRD) for a SaaS product called ScopeAI.
+
+--- PRODUCT CONTEXT ---
+
+ScopeAI is an AI-powered scope creep detection and change order management tool
+built specifically for freelance developers and small dev agencies (2–5 person
+teams). It automatically monitors client communication via Slack and Gmail/Outlook
+integrations, compares new client requests against the original agreed project
+scope, flags out-of-scope requests in real time, and generates professional
+change orders that clients can approve or reject directly inside ScopeAI.
+
+The core problem: 57% of agencies lose $1,000–$5,000/month to unbilled scope
+creep. 99% of freelance developers fail to bill for all out-of-scope work.
+Solo developers lose an estimated $7,800–$15,600/year on average. No existing
+tool is natively integrated into the developer workflow to catch these requests
+before they become free work.
+
+Target users:
+- Freelance developers managing 3–10 active projects, billing $5K–$30K/month
+- Small dev agency principals (2–5 person teams)
+- End clients (secondary users who receive and act on change orders)
+
+Key assumptions:
+- Solo-built MVP, web-only SaaS, June 2026 launch
+- Payments via Paddle or Dodo Payments
+- Pricing: $19–$49/month per user
+- Slack OAuth and Gmail/Outlook OAuth integrations for message monitoring
+- Original scope defined by developer (document upload or manual text input)
+- Change orders require developer confirmation before being sent to client
+- Distribution: build-in-public on X, warm network of 29+ past clients
+
+--- YOUR TASK ---
+
+Generate a complete PRD for ScopeAI. Structure it with the following sections:
+
+1. PRODUCT OVERVIEW
+   - Product name, tagline, and one-paragraph summary
+   - The problem being solved (with specific data points)
+   - The solution and how ScopeAI addresses the problem
+
+2. GOALS AND SUCCESS METRICS
+   - Business goals (MRR targets, user acquisition, retention)
+   - Product goals (core outcomes the product must achieve)
+   - Success metrics with specific measurable targets (KPIs)
+   - Anti-goals (what ScopeAI is explicitly NOT trying to do at MVP)
+
+3. TARGET USERS AND PERSONAS
+   - Primary persona: detailed profile of the freelance developer user
+   - Secondary persona: small dev agency principal
+   - Tertiary persona: the client (recipient of change orders)
+   - For each persona: goals, pain points, technical comfort, WTP
+
+4. FEATURES AND REQUIREMENTS
+   For each feature, include:
+   - Feature name and description
+   - User story: "As a [user], I want to [action] so that [outcome]"
+   - Acceptance criteria (numbered list)
+   - Priority: Must-Have / Should-Have / Nice-to-Have
+   - Notes or dependencies
+
+   Cover at minimum:
+   - Project creation and scope definition (upload or manual input)
+   - Slack OAuth integration for message monitoring
+   - Gmail/Outlook OAuth integration for email monitoring
+   - AI scope comparison engine (flags in-scope vs out-of-scope)
+   - Out-of-scope alert dashboard
+   - Change order generation (AI-drafted, developer-editable)
+   - Change order client approval workflow (approve/reject with signature)
+   - Audit trail and history log
+   - Multi-project management
+   - Billing/subscription management (Paddle integration)
+   - Developer-facing onboarding flow
+
+5. USER STORIES (comprehensive list beyond the features section)
+   - Cover all key user actions across the full product lifecycle
+   - Include edge cases: disputed change orders, expired approvals,
+     client ignoring requests, disconnected integrations
+
+6. ACCEPTANCE CRITERIA SUMMARY
+   - A consolidated checklist of the top 20 acceptance criteria across
+     all must-have features
+
+7. ASSUMPTIONS AND CONSTRAINTS
+   - Technical constraints (solo builder, 10–15 hrs/week, no Stripe)
+   - Business constraints (zero marketing budget, Pakistan-based)
+   - Product assumptions that could invalidate the PRD if wrong
+
+8. RISKS AND OPEN QUESTIONS
+   - Top 5 product risks with likelihood and impact ratings
+   - Open questions that need answers before or during development
+
+9. OUT OF SCOPE FOR MVP
+   - Features explicitly deferred to v2 or later
+   - Rationale for each deferral
+
+--- FORMAT INSTRUCTIONS ---
+- Use clear headings and subheadings
+- Use numbered lists for acceptance criteria and user stories
+- Use a table for the feature priority matrix
+- Be specific — avoid generic filler language
+- Where data is missing, state your assumption clearly and label it [ASSUMPTION]
+- Length: comprehensive and thorough — do not truncate sections
+
+--- QUALITY CHECKLIST (verify before finishing) ---
+[ ] Every feature has at least one user story and numbered acceptance criteria
+[ ] Success metrics are specific and measurable (not vague like "grow users")
+[ ] Risks include both product and business risks
+[ ] Assumptions are clearly labeled
+[ ] Anti-goals are explicitly stated
+[ ] Client persona is covered (they are a secondary user of the product)
+[ ] Slack and email integration requirements are detailed
+[ ] Change order approval workflow is fully specified
+
+If any critical information is missing to complete a section professionally,
+state your assumption clearly, label it [ASSUMPTION], and proceed.
+
+================================================================================
+
+
+================================================================================
+2. TRD GENERATOR PROMPT
+================================================================================
+
+You are an expert Technical Architect and Senior Full-Stack Engineer with deep
+experience in SaaS products, AI integrations, and third-party OAuth systems.
+
+Your task is to generate a complete, professional Technical Requirements Document
+(TRD) for a SaaS product called ScopeAI.
+
+--- PRODUCT CONTEXT ---
+
+ScopeAI is an AI-powered scope creep detection and change order management tool
+for freelance developers and small dev agencies. It connects to Slack (OAuth)
+and Gmail/Outlook (OAuth) to monitor client messages in real time, compares them
+against a developer-defined project scope using an AI engine, flags out-of-scope
+requests, and generates change orders for client approval.
+
+Builder profile:
+- Solo developer, 7 years experience
+- Expert in: React, Next.js, Node.js, PostgreSQL, AI integrations (OpenAI API)
+- Available: 10–15 hours/week
+- Location: Pakistan (Stripe not available — payments via Paddle or Dodo Payments)
+- Launch target: June 2026, web-only SaaS, no mobile app at MVP
+
+Key technical facts:
+- Slack OAuth integration: read messages from connected workspaces/channels
+- Gmail OAuth integration: read emails from connected accounts
+- Outlook/Microsoft OAuth integration: read emails from connected accounts
+- AI engine: compares incoming messages against stored project scope definitions
+- Change orders: AI-drafted, developer-edited, sent to client via email or in-app link
+- Client approval: clients interact via a public/shared link (no ScopeAI account required)
+- Payments: Paddle or Dodo Payments (recurring subscriptions)
+- Auth: developer users log in via email/password or OAuth (Google)
+
+--- YOUR TASK ---
+
+Generate a complete TRD for ScopeAI. Structure it with the following sections:
+
+1. SYSTEM ARCHITECTURE OVERVIEW
+   - High-level architecture diagram description (describe it in text)
+   - Component breakdown: frontend, backend, AI layer, integration layer, database
+   - Data flow: how a client message travels from Slack/email → AI analysis → alert
+
+2. RECOMMENDED TECH STACK
+   - Frontend: framework, styling, state management, component library
+   - Backend: runtime, framework, API style (REST or tRPC)
+   - Database: primary DB, ORM, migrations strategy
+   - AI/ML: LLM provider, prompt strategy, embedding approach if applicable
+   - Authentication: library/service recommendation
+   - Third-party integrations: Slack API, Gmail API, Outlook/Microsoft Graph API
+   - Payments: Paddle or Dodo Payments SDK
+   - Hosting/deployment: recommended platform for a solo Pakistani developer
+   - Email sending: transactional email provider recommendation
+   - Justify each choice with a brief rationale
+
+3. FRONTEND REQUIREMENTS
+   - Key pages and their technical requirements
+   - State management approach
+   - Real-time updates (WebSocket or polling for new scope alerts)
+   - Form handling and validation
+   - Responsive behavior requirements
+   - Performance requirements
+
+4. BACKEND REQUIREMENTS
+   - API design: list all major API endpoint groups with HTTP methods
+   - Background jobs: which tasks run asynchronously (e.g., message polling,
+     AI analysis, webhook processing)
+   - Webhook handling: Slack Event API, Gmail push notifications, Outlook webhooks
+   - Queue/job system recommendation
+   - Rate limiting and throttling strategy
+   - Error handling and retry logic for integrations
+
+5. DATABASE DESIGN (high-level)
+   - List all major tables/entities with their key fields
+   - Describe primary relationships
+   - Indexing strategy for performance
+   - Data retention and soft-delete strategy
+
+6. AI INTEGRATION REQUIREMENTS
+   - How the AI scope comparison engine works technically
+   - Prompt engineering approach: what context is sent to the LLM
+   - How project scope is stored and retrieved for comparison
+   - How confidence scoring or flagging thresholds work
+   - Token usage and cost management strategy
+   - Fallback behavior when AI is unavailable
+
+7. THIRD-PARTY INTEGRATION REQUIREMENTS
+   - Slack: OAuth scopes required, Event API setup, message filtering
+   - Gmail: OAuth scopes, push notifications vs polling, handling attachments
+   - Outlook: Microsoft Graph API scopes, webhook subscriptions
+   - Paddle/Dodo Payments: subscription creation, webhook handling, plan management
+
+8. AUTHENTICATION AND SECURITY
+   - Authentication flow for developer users
+   - How client approval links are secured (tokens, expiry)
+   - OAuth token storage and refresh strategy
+   - Data encryption at rest and in transit
+   - Secrets management approach
+   - OWASP top 10 considerations relevant to ScopeAI
+
+9. SCALABILITY AND PERFORMANCE
+   - Expected load at MVP vs. at $5K MRR scale
+   - Database connection pooling strategy
+   - Caching strategy (what gets cached, where, TTL)
+   - Horizontal scaling considerations for future
+
+10. DEPLOYMENT AND DEVOPS
+    - Recommended deployment pipeline for a solo developer
+    - Environment strategy (dev, staging, production)
+    - Monitoring and alerting tools
+    - Logging strategy
+    - Backup and disaster recovery
+
+11. TESTING STRATEGY
+    - Unit testing: what gets tested and with which tools
+    - Integration testing: how OAuth flows and webhooks are tested
+    - End-to-end testing: recommended approach
+    - AI output testing: how to validate scope detection quality
+
+12. TECHNICAL RISKS
+    - Top 5 technical risks with mitigation strategies
+    - Specific risks: Slack API rate limits, Gmail OAuth approval requirements,
+      AI hallucination in scope detection, Paddle webhook reliability
+
+--- FORMAT INSTRUCTIONS ---
+- Use clear headings and subheadings
+- Use tables for tech stack choices and API endpoint lists
+- Be specific — include actual library/service names, not just categories
+- Where a decision is a recommendation, label it [RECOMMENDED] and explain why
+- Where a decision depends on further information, label it [DECISION NEEDED]
+- Length: thorough and complete — do not truncate sections
+
+--- QUALITY CHECKLIST (verify before finishing) ---
+[ ] All three integrations (Slack, Gmail, Outlook) are addressed technically
+[ ] AI engine architecture is clearly explained end-to-end
+[ ] Client approval link security is covered
+[ ] Paddle/Dodo payment webhook handling is addressed
+[ ] Background job system is specified
+[ ] OAuth token refresh strategy is covered
+[ ] At least 5 technical risks are identified with mitigations
+[ ] Deployment strategy is realistic for a solo developer
+
+If any critical information is missing, state your assumption clearly,
+label it [ASSUMPTION], and proceed.
+
+================================================================================
+
+
+================================================================================
+3. APP FLOW GENERATOR PROMPT
+================================================================================
+
+You are an expert UX Strategist and Product Designer with deep experience in
+B2B SaaS tools for developers and agencies.
+
+Your task is to generate a complete App Flow document for a SaaS product called
+ScopeAI — covering every screen, every user journey, every state, and every
+edge case.
+
+--- PRODUCT CONTEXT ---
+
+ScopeAI is an AI-powered scope creep detection and change order management tool
+for freelance developers. It connects to Slack and Gmail/Outlook via OAuth,
+monitors client messages automatically, compares them against the developer's
+defined project scope using AI, flags out-of-scope requests, and enables the
+developer to generate and send change orders to clients for approval.
+
+Two distinct user types:
+1. DEVELOPER USER — has a ScopeAI account, sets up projects, manages scope,
+   reviews alerts, sends change orders
+2. CLIENT USER — does NOT have a ScopeAI account; interacts only via a
+   shared/public change order approval link sent by email
+
+Platform: Web-only SaaS (no mobile app at MVP)
+Auth: Email/password or Google OAuth for developer users
+
+--- YOUR TASK ---
+
+Generate a complete App Flow document for ScopeAI. Cover every flow below:
+
+1. ONBOARDING FLOW (Developer)
+   - Landing page → Sign up
+   - Email verification
+   - Welcome screen / onboarding wizard
+   - Step 1: Connect Slack (OAuth)
+   - Step 2: Connect Gmail or Outlook (OAuth)
+   - Step 3: Create first project
+   - Step 4: Define project scope (upload document OR type manually)
+   - Step 5: Select which Slack channels / email threads to monitor
+   - Completion state: "ScopeAI is now watching your project"
+   - Skip/later options: which steps can be skipped and what happens
+
+2. AUTHENTICATION FLOWS
+   - Sign up (email/password)
+   - Sign up (Google OAuth)
+   - Log in (email/password)
+   - Log in (Google OAuth)
+   - Forgot password / reset password
+   - Email verification resend
+   - Session expiry and re-authentication
+
+3. MAIN DASHBOARD
+   - What the developer sees on first login after onboarding
+   - What the developer sees on return visits (projects list, alert summary)
+   - Empty state (no projects yet)
+   - Alert notification badge behavior
+   - Navigation structure: sidebar or top nav, all main sections
+
+4. PROJECT MANAGEMENT FLOW
+   - Create new project (required fields, optional fields)
+   - View project detail page
+   - Edit project scope
+   - Archive or delete a project
+   - Multi-project switching
+
+5. INTEGRATION MANAGEMENT FLOW
+   - View connected integrations
+   - Connect Slack: OAuth flow, select workspace, select channels to monitor
+   - Connect Gmail: OAuth flow, select account, filter settings
+   - Connect Outlook: OAuth flow, select account, filter settings
+   - Disconnect an integration
+   - Re-authenticate an expired OAuth token
+   - Error state: integration disconnected mid-project
+
+6. SCOPE ALERT FLOW (Core Feature)
+   - How an alert appears to the developer (notification, dashboard badge, email)
+   - Alert detail view: original message, why it was flagged, confidence level
+   - Developer actions on an alert:
+     a) Mark as in-scope (dismiss)
+     b) Confirm as out-of-scope → proceed to change order
+     c) Snooze / review later
+   - Bulk alert management
+   - Empty state: no alerts yet
+   - False positive feedback (developer teaches the AI)
+
+7. CHANGE ORDER FLOW (Core Feature)
+   - From alert → generate change order (AI drafts it)
+   - Developer reviews and edits the AI-generated change order
+   - Change order fields: description, price, timeline impact, terms
+   - Preview change order as the client will see it
+   - Send change order to client (via email link)
+   - Change order status tracking: Sent → Viewed → Approved / Rejected / Expired
+   - Developer notification when client acts on it
+   - Approved state: what happens next (logged, project scope updated?)
+   - Rejected state: developer options (negotiate, revise, cancel)
+   - Expired state: developer options (resend, cancel)
+
+8. CLIENT CHANGE ORDER APPROVAL FLOW (No ScopeAI Account Required)
+   - Client receives email with change order link
+   - Client opens public approval page (no login required)
+   - Client sees: change order details, price, timeline impact, terms
+   - Client actions: Approve or Reject
+   - Approval confirmation state (client sees, developer is notified)
+   - Rejection: client can optionally leave a reason
+   - Link expiry: client tries to open an expired link
+
+9. AUDIT TRAIL AND HISTORY
+   - Where developer finds the full history of all scope changes, alerts, and orders
+   - Filter and search functionality
+   - Export history (CSV or PDF)
+
+10. BILLING AND SUBSCRIPTION FLOW
+    - Free trial or free tier (if applicable — state your assumption)
+    - Upgrade to paid plan: plan selection, Paddle checkout
+    - Subscription management: view plan, cancel, upgrade/downgrade
+    - Payment failure state: what happens to the developer's account
+    - Invoice/receipt access
+
+11. SETTINGS FLOW
+    - Profile settings
+    - Notification preferences (email, in-app)
+    - AI sensitivity settings (how aggressive scope flagging is)
+    - Change order default template settings
+    - Account deletion
+
+12. EDGE CASES AND ERROR STATES
+    - Slack message cannot be analyzed (API error)
+    - AI analysis returns inconclusive result
+    - Client change order link is shared or accessed from unexpected location
+    - Developer loses internet mid-session
+    - Integration OAuth token expires silently
+    - Two alerts generated from the same client message
+
+--- FORMAT INSTRUCTIONS ---
+- Use numbered steps for every flow
+- Label each screen clearly (e.g., "Screen: Alert Detail View")
+- For every screen or state, describe: what the user sees, what actions are available,
+  and what happens after each action
+- Include empty states, error states, and success states for every major flow
+- Use [ASSUMPTION] where information was not provided
+
+--- QUALITY CHECKLIST (verify before finishing) ---
+[ ] Both user types (developer and client) are fully covered
+[ ] Client flow requires no ScopeAI account
+[ ] Every major feature has a complete flow with all states
+[ ] OAuth connection and disconnection flows are covered
+[ ] Change order lifecycle (sent → viewed → approved/rejected/expired) is complete
+[ ] All edge cases section is populated with realistic scenarios
+[ ] Empty states are described for every major screen
+[ ] Onboarding wizard is described step by step
+
+================================================================================
+
+
+================================================================================
+4. UI/UX DESIGN BRIEF GENERATOR PROMPT
+================================================================================
+
+You are an expert UX Strategist, UI Designer, and Design Systems architect with
+deep experience designing B2B SaaS tools for technical users (developers and
+agency owners).
+
+Your task is to generate a complete UI/UX Design Brief for a SaaS product called
+ScopeAI.
+
+--- PRODUCT CONTEXT ---
+
+ScopeAI is an AI-powered scope creep detection and change order management tool
+for freelance developers and small dev agencies. It monitors client communication
+via Slack and email, flags out-of-scope requests using AI, and enables developers
+to generate and send change orders to clients.
+
+Target user: Freelance developer or small agency principal — technical, pragmatic,
+time-poor, values clarity and efficiency over decoration. Uses tools like Linear,
+GitHub, Vercel, and Notion daily. Has high standards for software quality.
+
+Client user (secondary): Non-technical business owner or startup founder who
+receives change order links via email. Must immediately understand and trust
+what they're being asked to approve.
+
+Platform: Web-only SaaS at MVP.
+Brand name: ScopeAI
+Tone: Professional, direct, trustworthy, developer-friendly — NOT playful or
+consumer-app-like.
+
+--- YOUR TASK ---
+
+Generate a complete UI/UX Design Brief for ScopeAI. Structure it as follows:
+
+1. DESIGN GOALS
+   - Primary design goals (what the design must achieve, not just look like)
+   - The single most important UX outcome for the primary user
+   - The single most important UX outcome for the client (change order recipient)
+
+2. UX PRINCIPLES
+   - 5–7 core UX principles to govern every design decision for ScopeAI
+   - For each principle: name, one-sentence description, and a practical example
+     of how it applies to ScopeAI specifically
+
+3. VISUAL STYLE AND BRAND DIRECTION
+   - Overall aesthetic direction (e.g., clean/minimal, data-dense/utilitarian,
+     bold/confident — choose and justify for ScopeAI's audience)
+   - Mood board description: 3–5 reference products or design directions
+     that ScopeAI's visual style should draw from
+   - What to avoid visually (consumer-app patterns, etc.)
+
+4. COLOR PALETTE
+   - Recommended primary color with rationale (why this color for ScopeAI)
+   - Secondary/accent colors
+   - Semantic colors: success, warning, danger, neutral
+   - Background and surface colors
+   - Dark mode consideration: required at MVP or v2?
+
+5. TYPOGRAPHY
+   - Recommended font family (or families) with rationale
+   - Type scale: heading sizes (H1–H4), body, small/label, code
+   - Font weight usage guidelines
+   - Line height and spacing recommendations
+
+6. DESIGN SYSTEM AND COMPONENTS
+   - Recommended component library (e.g., shadcn/ui, Radix, Chakra, custom)
+     with rationale for ScopeAI's stack (Next.js)
+   - Core components to design/customize first (prioritized list)
+   - Icon set recommendation
+   - Data display components: tables, cards, badges, status indicators
+   - AI-specific UI patterns: how to display AI confidence, AI-generated content,
+     AI flags — without making the UI feel untrustworthy
+
+7. LAYOUT AND NAVIGATION
+   - Recommended navigation pattern (sidebar, top nav, hybrid) with rationale
+   - Dashboard layout direction
+   - Alert list layout: how to display scope alerts efficiently
+   - Change order layout: how to display draft and sent change orders
+   - Responsive behavior: minimum required breakpoints at MVP
+
+8. KEY SCREEN REQUIREMENTS
+   For each screen listed, describe the layout direction, key elements,
+   and critical UX considerations:
+   - Main Dashboard (alert summary, project overview)
+   - Alert Detail View (flagged message, AI reasoning, developer actions)
+   - Change Order Editor (AI draft, editable fields, preview)
+   - Client Change Order Approval Page (public, no login — trust is critical)
+   - Project Setup / Scope Definition Screen
+   - Integration Connection Screen (Slack, Gmail, Outlook)
+   - Onboarding Wizard
+
+9. ACCESSIBILITY REQUIREMENTS
+   - Minimum WCAG compliance level for MVP
+   - Specific accessibility requirements for the client-facing approval page
+   - Keyboard navigation requirements
+   - Color contrast requirements
+
+10. EMPTY STATES AND LOADING STATES
+    - Design direction for empty states (no projects, no alerts, no history)
+    - Loading state patterns (skeleton screens vs. spinners — which and when)
+    - Error state design direction
+
+11. AI UI PATTERNS (specific to ScopeAI)
+    - How to visually distinguish AI-generated content from developer-authored content
+    - How to display scope detection confidence levels
+    - How to handle and display AI uncertainty or low-confidence flags
+    - How to show the developer that the AI is actively monitoring
+
+--- FORMAT INSTRUCTIONS ---
+- Use clear headings and subheadings
+- For color palette, include recommended hex codes or color descriptions
+- Be specific — avoid generic design advice; tie every recommendation to ScopeAI
+- Use [ASSUMPTION] where design decisions depend on missing brand information
+- Include rationale for every major recommendation
+
+--- QUALITY CHECKLIST (verify before finishing) ---
+[ ] Every recommendation is specific to ScopeAI, not generic
+[ ] The client approval page has its own focused UX treatment
+[ ] AI UI patterns are specifically addressed
+[ ] Color palette includes semantic colors and dark mode consideration
+[ ] Component library recommendation is justified for the tech stack
+[ ] Empty states and loading states are addressed
+[ ] Accessibility requirements are specified
+
+================================================================================
+
+
+================================================================================
+5. BACKEND SCHEMA GENERATOR PROMPT
+================================================================================
+
+You are an expert Backend Architect and Database Engineer with deep experience
+in PostgreSQL, multi-tenant SaaS applications, and AI-integrated products.
+
+Your task is to generate a complete Backend and Database Schema document for a
+SaaS product called ScopeAI.
+
+--- PRODUCT CONTEXT ---
+
+ScopeAI is an AI-powered scope creep detection and change order management SaaS
+for freelance developers. Key data entities:
+- Developer users (accounts, subscriptions)
+- Projects (each with a defined scope)
+- Integrations (Slack workspaces, Gmail accounts, Outlook accounts — OAuth tokens)
+- Monitored messages (incoming client messages from Slack/email)
+- Scope alerts (AI analysis results flagging out-of-scope messages)
+- Change orders (AI-drafted, developer-edited, sent to clients for approval)
+- Clients (name/email only — no ScopeAI account)
+- Audit log (history of all scope decisions and change order actions)
+
+Tech stack assumptions:
+- Database: PostgreSQL
+- ORM: Prisma (or specify alternative with rationale)
+- Backend: Node.js / Next.js API routes or Express
+- Auth: JWT-based sessions or NextAuth
+- Payments: Paddle (webhook-driven subscription management)
+- File storage: for scope documents uploaded by developers
+
+--- YOUR TASK ---
+
+Generate a complete Backend and Database Schema document for ScopeAI. Include:
+
+1. DATABASE SCHEMA
+
+For every table, provide:
+- Table name
+- All columns: name, data type, constraints (NOT NULL, UNIQUE, DEFAULT, etc.)
+- Primary key
+- Foreign keys and relationships
+- Indexes (which columns are indexed and why)
+- Soft delete strategy (deleted_at timestamp or similar)
+- Brief description of the table's purpose
+
+Required tables (add any others you identify as necessary):
+
+- users — developer accounts
+- subscriptions — Paddle subscription data linked to users
+- projects — each project a developer manages in ScopeAI
+- project_scopes — the defined scope text/document for a project
+  (consider versioning for scope edits)
+- integrations — OAuth connections (Slack, Gmail, Outlook) per user or per project
+- monitored_sources — specific Slack channels or email accounts being monitored
+  per project
+- ingested_messages — raw messages pulled from Slack/email
+- scope_alerts — AI analysis results (which message, why flagged,
+  confidence score, developer action taken)
+- change_orders — full change order record (linked to alert, project, client)
+- change_order_approvals — client approval/rejection events
+- clients — client contact records (name, email) per developer
+- audit_logs — immutable event log of all major actions
+- notification_preferences — per-user notification settings
+
+2. RELATIONSHIPS DIAGRAM (described in text)
+   - Describe all entity relationships clearly
+   - Indicate one-to-one, one-to-many, many-to-many relationships
+   - Note any junction tables required
+
+3. USER ROLES AND PERMISSIONS
+   - Developer user: full access to their own data only (multi-tenancy)
+   - Client: access only to their specific change order via a secure token
+   - System/Admin (if applicable): describe access level
+   - How row-level security or tenant isolation is enforced in PostgreSQL
+
+4. API ENDPOINTS
+   For each endpoint group, list:
+   - HTTP method and path
+   - Purpose
+   - Auth required (yes/no, and which role)
+   - Request body or query params (key fields)
+   - Response (key fields)
+   - Any important business logic or validation
+
+   Cover these endpoint groups:
+   - Auth (register, login, logout, refresh, OAuth callbacks)
+   - Users (profile, settings)
+   - Projects (CRUD)
+   - Scopes (create, update, version history)
+   - Integrations (connect, disconnect, list, refresh token)
+   - Monitored Sources (add, remove, list per project)
+   - Messages (list ingested messages per project)
+   - Alerts (list, view detail, mark as in-scope, confirm as out-of-scope)
+   - Change Orders (create, update, send, list, view detail)
+   - Change Order Approval (public endpoint — client approves/rejects via token)
+   - Subscriptions (create, cancel, view, Paddle webhook handler)
+   - Audit Log (list per project)
+   - Webhooks (Slack events, Gmail push, Outlook webhooks)
+
+5. VALIDATION RULES
+   - Key validation rules for each major entity
+   - Input sanitization requirements
+   - Business rule validations (e.g., cannot send a change order without a price)
+
+6. SECURITY CONSIDERATIONS
+   - How OAuth tokens are stored (encrypted, never exposed via API)
+   - How client approval tokens are generated, stored, and validated
+   - SQL injection prevention
+   - Rate limiting on sensitive endpoints
+   - What data is never returned to the frontend (sensitive fields)
+   - GDPR/data retention considerations
+
+7. BACKGROUND JOBS AND QUEUES
+   - List all background jobs (message ingestion, AI analysis, webhook retries, etc.)
+   - For each job: trigger, frequency, input, output, failure handling
+
+8. FILE STORAGE
+   - How developer-uploaded scope documents are stored
+   - File type and size limits
+   - Security: are files private per user?
+
+--- FORMAT INSTRUCTIONS ---
+- Use SQL-style table definitions for the schema section
+- Use tables for API endpoints
+- Be specific — include actual data types (VARCHAR, TEXT, UUID, TIMESTAMPTZ, JSONB, etc.)
+- Use [ASSUMPTION] where design decisions depend on missing information
+- Include rationale for non-obvious design choices
+
+--- QUALITY CHECKLIST (verify before finishing) ---
+[ ] Every table has a primary key, created_at, and updated_at
+[ ] Multi-tenancy / data isolation is explicitly addressed
+[ ] OAuth token storage security is covered
+[ ] Client approval token generation and validation is specified
+[ ] All background jobs are listed with failure handling
+[ ] Public client endpoint (change order approval) is designed for security
+[ ] Paddle webhook handling is included in the API section
+[ ] Soft delete strategy is specified
+
+================================================================================
+
+
+================================================================================
+6. IMPLEMENTATION PLAN GENERATOR PROMPT
+================================================================================
+
+You are an expert Software Engineering Lead, Technical Project Manager, and
+Solo SaaS Builder coach with deep experience helping individual developers ship
+production-grade SaaS products.
+
+Your task is to generate a complete Implementation Plan and Development Roadmap
+for a SaaS product called ScopeAI.
+
+--- PRODUCT CONTEXT ---
+
+ScopeAI is an AI-powered scope creep detection and change order management SaaS
+for freelance developers. Core features: Slack and Gmail/Outlook OAuth integration
+for automatic message monitoring, AI-powered scope comparison engine, out-of-scope
+alert dashboard, change order generation and sending, and client approval workflow.
+
+Builder profile:
+- Solo developer, 7 years experience, expert in React/Next.js/Node.js/PostgreSQL/AI
+- Available: 10–15 hours/week
+- Launch target: June 2026
+- $0 marketing budget
+- Pakistan-based (Paddle or Dodo Payments instead of Stripe)
+- Distribution: X (@saifbuilds build-in-public) + warm network of 29+ past clients
+
+Business goals: Reach $2K–$5K MRR. Prioritize speed to first paying customer
+over completeness. MVP must be functional, not perfect.
+
+--- YOUR TASK ---
+
+Generate a complete Implementation Plan for ScopeAI. Structure it as follows:
+
+1. MVP SCOPE DEFINITION
+   - Exact feature set included in MVP (must-have only)
+   - Exact feature set excluded from MVP (deferred to v2+)
+   - The single most important user action the MVP must support end-to-end
+   - Rationale for every exclusion
+
+2. PHASED DEVELOPMENT ROADMAP
+
+Organize into phases. For each phase:
+- Phase name and goal
+- Duration estimate (in weeks, assuming 10–15 hrs/week)
+- Tasks list (specific, actionable, ordered)
+- Dependencies (what must be done before this phase starts)
+- Deliverable / done criteria (how you know the phase is complete)
+
+Suggested phase structure (adjust if a better order emerges):
+
+   Phase 0: Foundation (project setup, auth, DB, deployment pipeline)
+   Phase 1: Core Data Model (projects, scopes, clients, basic CRUD)
+   Phase 2: Integrations (Slack OAuth, Gmail OAuth, Outlook OAuth, message ingestion)
+   Phase 3: AI Engine (scope comparison, alert generation, confidence scoring)
+   Phase 4: Change Orders (generation, editing, sending, client approval page)
+   Phase 5: Billing (Paddle integration, subscription plans, trial logic)
+   Phase 6: Polish and Launch Prep (onboarding, empty states, notifications,
+             error handling, performance)
+   Phase 7: Public Launch
+
+3. TASK DEPENDENCY MAP
+   - Identify the critical path: which tasks block the most other tasks
+   - List any tasks that can be parallelized
+   - Flag the highest-risk tasks (most likely to take longer than estimated)
+
+4. RECOMMENDED ORDER OF IMPLEMENTATION (summary)
+   - A concise prioritized list of the top 20 implementation tasks in order
+   - For each: estimated hours and which phase it belongs to
+
+5. TESTING PLAN
+   - What to test at each phase
+   - How to test OAuth flows without real Slack/Gmail accounts
+   - How to test the AI scope detection quality
+   - How to test the client approval flow end-to-end
+   - Manual testing checklist for MVP launch readiness
+
+6. DEPLOYMENT PLAN
+   - Recommended hosting platform with rationale for a solo developer
+   - CI/CD pipeline setup (what gets automated and when)
+   - Environment strategy: local → staging → production
+   - Database migration strategy
+   - Zero-downtime deployment approach (or acceptable downtime at MVP scale)
+
+7. LAUNCH CHECKLIST
+   - Pre-launch technical checklist (security, performance, monitoring)
+   - Pre-launch product checklist (onboarding works, billing works, error pages)
+   - Pre-launch marketing checklist (for build-in-public / X launch)
+   - First 10 users acquisition plan (using the 29+ past client network)
+
+8. RISKS AND MITIGATION
+   - Top 5 implementation risks with estimated impact and mitigation strategy
+   - Specific risks to address:
+     * Gmail OAuth verification by Google (can delay launch significantly)
+     * Slack app approval process
+     * AI scope detection quality and hallucination risk
+     * Solo developer burnout on 10–15 hrs/week
+     * First customer taking too long to arrive
+
+9. FUTURE IMPROVEMENTS (v2 and beyond)
+   - Features deferred from MVP, now as a prioritized v2 backlog
+   - Suggested order for post-launch additions
+   - Indicators that signal it is time to build each v2 feature
+
+10. SUCCESS MILESTONES
+    - Week 1 after launch: what success looks like
+    - Month 1: what success looks like
+    - Month 3: what success looks like
+    - $2K MRR milestone: what it takes to get there
+    - $5K MRR milestone: what it takes to get there
+
+--- FORMAT INSTRUCTIONS ---
+- Use tables for the phased roadmap and task priority list
+- Use numbered lists for checklists
+- Be specific — include actual hours estimates, not just "a few days"
+- Highlight the critical path clearly
+- Use [ASSUMPTION] where decisions depend on missing information
+- Be realistic about solo developer capacity — do not over-promise timelines
+
+--- QUALITY CHECKLIST (verify before finishing) ---
+[ ] MVP scope is clearly and tightly defined
+[ ] Google OAuth verification risk is explicitly addressed
+[ ] Slack app review process risk is explicitly addressed
+[ ] Billing integration is included in a specific phase with tasks
+[ ] Launch checklist is specific to ScopeAI, not generic
+[ ] First 10 users plan uses the builder's actual warm network
+[ ] Hour estimates are realistic for 10–15 hrs/week availability
+[ ] v2 backlog is prioritized, not just listed
+
+================================================================================
+
+END OF FILE — ScopeAI Master Prompt Pack
+Generated: June 28, 2026
+================================================================================
