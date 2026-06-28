@@ -6,13 +6,6 @@ declare module "next-auth" {
       id: string;
       onboardingCompleted: boolean;
       onboardingStep: number;
-      emailVerified: boolean;
     } & DefaultSession["user"];
-  }
-
-  interface User {
-    onboardingCompleted?: boolean;
-    onboardingStep?: number;
-    emailVerified?: boolean;
   }
 }

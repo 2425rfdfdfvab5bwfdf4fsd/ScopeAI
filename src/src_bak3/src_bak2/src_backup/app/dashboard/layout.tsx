@@ -9,7 +9,9 @@ export default async function DashboardLayout({ children }: { children: React.Re
     redirect("/auth/signin");
   }
 
-  if (!session.user.emailVerified) {
+  // emailVerified is Date | null — null means unverified credentials user
+  const user = session.user as typeof session.user & { emailVerified?: Date | null };
+  if (user.emailVerified === null) {
     redirect("/auth/verify");
   }
 

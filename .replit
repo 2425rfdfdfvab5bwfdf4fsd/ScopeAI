@@ -27,8 +27,28 @@ waitForPort = 5000
 outputType = "webview"
 
 [[ports]]
+localPort = 3000
+externalPort = 3001
+
+[[ports]]
+localPort = 3001
+externalPort = 3002
+
+[[ports]]
 localPort = 5000
 externalPort = 80
+
+[[ports]]
+localPort = 5001
+externalPort = 3000
+
+[[ports]]
+localPort = 5002
+externalPort = 3003
+
+[[ports]]
+localPort = 5003
+externalPort = 4200
 
 [userenv]
 
@@ -36,3 +56,10 @@ externalPort = 80
 NEXTAUTH_URL = "https://a8e4a58c-5f59-45ca-8764-d52dadfb7a41-00-3ca37o9hj3gtt.pike.replit.dev"
 NEXT_PUBLIC_APP_URL = "https://a8e4a58c-5f59-45ca-8764-d52dadfb7a41-00-3ca37o9hj3gtt.pike.replit.dev"
 NODE_ENV = "development"
+
+[userenv.development]
+NEXTAUTH_SECRET = "ed3466243b97ca6affb63215caedf61dae69aaa5b0b099378cab1ab1597584a5"
+RESEND_API_KEY = "re_placeholder"
+RESEND_FROM_EMAIL = "ScopeAI <noreply@scopeai.co>"
+GOOGLE_CLIENT_ID = "placeholder"
+GOOGLE_CLIENT_SECRET = "placeholder"

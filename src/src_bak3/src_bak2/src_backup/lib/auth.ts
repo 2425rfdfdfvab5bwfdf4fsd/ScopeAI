@@ -46,8 +46,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             avatarUrl: true,
             emailVerified: true,
             passwordHash: true,
-            onboardingCompleted: true,
-            onboardingStep: true,
           },
         });
 
@@ -71,7 +69,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       if (session.user) {
         session.user.id = user.id;
 
-        // Fetch fresh user data including onboarding status
         const dbUser = await db.user.findUnique({
           where: { id: user.id },
           select: {
@@ -84,15 +81,15 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         if (dbUser) {
           session.user.onboardingCompleted = dbUser.onboardingCompleted;
           session.user.onboardingStep = dbUser.onboardingStep;
-          session.user.emailVerified = dbUser.emailVerified;
+          // Convert boolean to Date | null to satisfy NextAuth's AdapterUser type
+          session.user.emailVerified = dbUser.emailVerified ? new Date() : null;
         }
       }
       return session;
     },
     async signIn({ user, account }) {
-      // Allow OAuth sign-ins immediately (email is verified by provider)
+      // Allow OAuth sign-ins immediately
       if (account?.provider !== "credentials") {
-        // Mark email as verified for OAuth users
         if (user.email) {
           await db.user.updateMany({
             where: { email: user.email },
@@ -113,9 +110,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   },
   events: {
     async createUser({ user }) {
-      // Create default notification preferences for new users
       if (user.email) {
-        // This will be expanded in Phase 1 when notification_preferences table exists
         console.warn(`New user created: ${user.email}`);
       }
     },
